@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """ Type annotate the function """
 import typing
-from typing import Tuple
+from typing import Tuple, List
 
 
-def zoom_array(lst: Tuple[int, ...], factor: int = 2) -> Tuple[int, ...]:
-    zoomed_in: Tuple[int, ...] = tuple(
+def zoom_array(lst: Tuple, factor: int = 2) -> typing.List:
+    zoomed_in: List = [
         item for item in lst
         for i in range(factor)
-    )
+    ]
     return zoomed_in
 
 
